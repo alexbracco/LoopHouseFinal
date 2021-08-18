@@ -1,0 +1,493 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Assets/Items/Skeleton_Key_WU.png" type="Texture" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://Main/Main.gd" type="Script" id=3]
+[ext_resource path="res://Assets/Background/Background.jpg" type="Texture" id=4]
+[ext_resource path="res://Assets/rooms/Door.png" type="Texture" id=5]
+[ext_resource path="res://Assets/rooms/key.png" type="Texture" id=6]
+[ext_resource path="res://Assets/rooms/Stairs.png" type="Texture" id=7]
+[ext_resource path="res://Assets/rooms/bed.png" type="Texture" id=8]
+[ext_resource path="res://Assets/rooms/Chair.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Background/credit bg.png" type="Texture" id=10]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 513.073, 310.517 )
+scale = Vector2( 0.22, 0.22 )
+texture = ExtResource( 4 )
+
+[node name="Front" type="Control" parent="."]
+visible = false
+margin_right = 1024.0
+margin_bottom = 600.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="Front"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -300.0
+margin_right = 1.84753
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Front_Entry" type="Button" parent="Front/Panel"]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = -90.0
+margin_bottom = -20.0
+text = "Enter"
+icon = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Front"]
+margin_left = 100.0
+margin_top = 100.0
+margin_right = 700.0
+margin_bottom = 510.0
+text = "Front 
+
+It’s been a long time since anyone set foot here. The windows are too covered in dust to peer through and your key is already in the lock of the front door. As you turn the key you remember the strange letter that brought you back here. 
+
+“The house is yours now. I know you still have your key. Make yourself at home. Remember: don’t go into the basement.” 
+"
+
+[node name="Entryway" type="Control" parent="."]
+visible = false
+margin_right = 1024.0
+margin_bottom = 600.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Entryway"]
+margin_left = 100.0
+margin_top = 100.0
+margin_right = 700.0
+margin_bottom = 200.0
+rect_pivot_offset = Vector2( 420.792, 35.0058 )
+text = "Entryway 
+
+The entryway is musty and still. Running your finger along the wall reveals warm chestnut wood that has been dulled gray by a thick layer of dust.
+There is a door to the rest of the main floor, and stairs leading up or down. 
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="Entryway"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -300.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Entry_Dining" type="Button" parent="Entryway/Panel"]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = -90.0
+margin_bottom = -20.0
+text = "Door"
+icon = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Entry_Bedroom" type="Button" parent="Entryway/Panel"]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = -10.0
+margin_bottom = 60.0
+text = "Up Stairs"
+icon = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Entry_Basement" type="Button" parent="Entryway/Panel"]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = 70.0
+margin_bottom = 140.0
+text = "Basement Stairs"
+icon = ExtResource( 7 )
+
+[node name="Bedroom" type="Control" parent="."]
+visible = false
+margin_right = 1024.0
+margin_bottom = 600.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="Bedroom"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -300.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bedroom_Sleep" type="Button" parent="Bedroom/Panel"]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = -90.0
+margin_bottom = -20.0
+text = "Sleep"
+icon = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bedroom_Entry" type="Button" parent="Bedroom/Panel"]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = -10.0
+margin_bottom = 60.0
+text = "Down Stairs"
+icon = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EXTRABedroom_Computer" type="Button" parent="Bedroom/Panel"]
+visible = false
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = 70.0
+margin_bottom = 140.0
+text = "Check Computer"
+icon = ExtResource( 2 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Bedroom"]
+margin_left = 100.0
+margin_top = 100.0
+margin_right = 700.0
+margin_bottom = 200.0
+text = "Bedroom
+
+There is only one bedroom on this floor now, as you are the house’s only remaining occupant. A four panel bed made with soft pint sheets sits in the center of the room. "
+
+[node name="Dining" type="Control" parent="."]
+visible = false
+margin_right = 1024.0
+margin_bottom = 600.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="Dining"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -300.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dining_Chair" type="Button" parent="Dining/Panel"]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = -90.1525
+margin_bottom = -20.1525
+text = "Check Your Chair"
+icon = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dining_Entry" type="Button" parent="Dining/Panel"]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = -10.0
+margin_bottom = 60.0
+text = "Entryway Door"
+icon = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dining_Kitchen" type="Button" parent="Dining/Panel"]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = 70.0
+margin_bottom = 140.0
+text = "Kitchen Door"
+icon = ExtResource( 5 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Dining"]
+margin_left = 100.0
+margin_top = 100.0
+margin_right = 700.0
+margin_bottom = 200.0
+text = "Dining room
+
+A massive dining table dominates the room. Each place is set with fine China, coordinated with a tablecloth that would be luxurious if it were not moth bitten. More dishes are stowed away in glass cabinets. "
+
+[node name="Kitchen" type="Control" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="Kitchen"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -300.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Kitchen_Dining" type="Button" parent="Kitchen/Panel"]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = -90.0
+margin_bottom = -20.0
+text = "Dining Room Door"
+icon = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EXTRAKitchen_getfood" type="Button" parent="Kitchen/Panel"]
+visible = false
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = -10.0
+margin_bottom = 60.0
+text = "Get Food"
+icon = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Kitchen"]
+margin_left = 100.0
+margin_top = 100.0
+margin_right = 700.0
+margin_bottom = 200.0
+text = "Kitchen
+
+An old style gas stove sits unused, a disconnected decoration next to appliances that would’ve been top of the line when you were last here. The pantry is well stocked, full of unexpired basics. (Making a meal from this would be easy enough)  
+"
+
+[node name="Chair" type="Control" parent="."]
+visible = false
+margin_right = 1024.0
+margin_bottom = 600.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="Chair"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -300.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Chair_Dining" type="Button" parent="Chair/Panel"]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = -90.0
+margin_bottom = -20.0
+text = "Stand Up"
+icon = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Chair"]
+margin_left = 100.0
+margin_top = 100.0
+margin_right = 700.0
+margin_bottom = 200.0
+text = "Your Place Setting
+
+Dispite the dust that cakes the house the plates are clean and silverware polished to a mirror shine. A thin piece of paper is tucked into your napkin, pinned with the napkin ring. A note from that time. You can’t bring yourself to read it. "
+
+[node name="Bed" type="Control" parent="."]
+visible = false
+margin_right = 1024.0
+margin_bottom = 600.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="Bed"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -300.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bed_Bedroom" type="Button" parent="Bed/Panel"]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = -90.0
+margin_bottom = -20.0
+text = "Get Up"
+icon = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Bed"]
+margin_left = 100.0
+margin_top = 100.0
+margin_right = 700.0
+margin_bottom = 200.0
+text = "Bed
+
+You wake with a jolt. Surrounded by soft sheets. You don’t know how long you slept. The house seems the same as ever. 
+
+"
+
+[node name="Credits" type="Control" parent="."]
+visible = false
+margin_top = 0.784576
+margin_right = 1024.0
+margin_bottom = 600.785
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CreditsBackground" type="Sprite" parent="Credits"]
+position = Vector2( 513.78, 299.71 )
+scale = Vector2( 0.43, 0.43 )
+texture = ExtResource( 10 )
+
+[node name="Creditstext" type="RichTextLabel" parent="Credits"]
+anchor_left = 0.500766
+anchor_top = 0.5
+anchor_right = 0.500766
+anchor_bottom = 0.5
+margin_left = -395.785
+margin_top = -185.0
+margin_right = 395.215
+margin_bottom = 89.0
+text = "CREDITS
+
+Game by Alex Bracco
+Assets: 
+Sprite work: Ayene-chan (DA)
+Backgrounds: Pixabay (Pexels)
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Credits_Bed" type="Button" parent="Credits"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -150.0
+margin_top = -76.0
+margin_right = 150.0
+text = "Continue"
+
+[node name="Unused" type="Control" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Items Pannel" type="Panel" parent="Unused"]
+visible = false
+anchor_bottom = 1.0
+margin_right = 300.0
+margin_bottom = 600.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label Items" type="Label" parent="Unused/Items Pannel"]
+visible = false
+margin_right = 300.0
+margin_bottom = 31.0
+text = "
+Items"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="Unused/Items Pannel"]
+position = Vector2( 83.0587, 205.104 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 1 )
+
+[node name="Sleep" type="Control" parent="Unused"]
+visible = false
+margin_right = 1024.0
+margin_bottom = 600.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Basemet" type="Control" parent="Unused"]
+visible = false
+margin_right = 1024.0
+margin_bottom = 600.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label Move" type="Label" parent="."]
+margin_left = 724.0
+margin_right = 1024.0
+margin_bottom = 41.1704
+text = "
+Move"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="button_down" from="Front/Panel/Front_Entry" to="." method="_on_Front_Entry_button_down"]
+[connection signal="button_down" from="Entryway/Panel/Entry_Dining" to="." method="_on_Entry_Dining_button_down"]
+[connection signal="button_down" from="Entryway/Panel/Entry_Bedroom" to="." method="_on_Entry_Bedroom_button_down"]
+[connection signal="button_down" from="Entryway/Panel/Entry_Basement" to="." method="_on_Entry_Basement_button_down"]
+[connection signal="button_down" from="Bedroom/Panel/Bedroom_Sleep" to="." method="_on_Bedroom_Sleep_button_down"]
+[connection signal="button_down" from="Bedroom/Panel/Bedroom_Entry" to="." method="_on_Bedroom_Entry_button_down"]
+[connection signal="button_down" from="Dining/Panel/Dining_Chair" to="." method="_on_Dining_Chair_button_down"]
+[connection signal="button_down" from="Dining/Panel/Dining_Entry" to="." method="_on_Dining_Entry_button_down"]
+[connection signal="button_down" from="Dining/Panel/Dining_Kitchen" to="." method="_on_Dining_Kitchen_button_down"]
+[connection signal="button_down" from="Kitchen/Panel/Kitchen_Dining" to="." method="_on_Kitchen_Dining_button_down"]
+[connection signal="button_down" from="Chair/Panel/Chair_Dining" to="." method="_on_Chair_Dining_button_down"]
+[connection signal="button_down" from="Bed/Panel/Bed_Bedroom" to="." method="_on_Bed_Bedroom_button_down"]
+[connection signal="button_down" from="Credits/Credits_Bed" to="." method="_on_Credits_Bed_button_down"]
